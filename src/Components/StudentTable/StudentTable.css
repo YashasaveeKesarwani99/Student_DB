@@ -1,0 +1,55 @@
+.table{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-shadow: 0 0 10px gray;
+    width: 100%;
+}
+
+.sub-nav1{
+    display:flex;
+    justify-content:left;
+    align-content:center;
+}
+
+.sub-table{
+    margin-top:5%;
+}
+
+.sub-table hr{
+    color: black 2px;
+}
+
+.table-container{
+   
+}
+
+.add-student{
+    display: flex;
+    justify-content:space-between;
+    align-content: center;
+}
+
+.search-input{
+    width: 400px;
+}
+
+@media (max-width:900px){
+    .add-student{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+}
+
+@media (max-width:500px){
+    .search-input{
+        width: 80%;
+    }
+}
