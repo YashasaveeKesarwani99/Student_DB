@@ -132,8 +132,8 @@ const StudentTable = (props)=>{
             </div>
             <div className='table-container'>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer  sx={{ maxHeight: 440 }}>
-             <Table stickyHeader aria-label="sticky table" style={{border:'1px grey solid'}}>
+            <TableContainer  sx={{ maxHeight: 440 }} style={{border:'1px grey solid'}}>
+             <Table stickyHeader aria-label="sticky table">
             <TableHead>
             <TableRow >
             <TableCell style={{fontWeight:"700"}}>Roll No.</TableCell>
