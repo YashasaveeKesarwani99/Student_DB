@@ -23,14 +23,14 @@ import './StudentTable.css'
 const StudentTable = (props)=>{
 
     const [show,setShow] = useState(false);
-    const [data,setData] = useState()
+    const [data,setData] = useState({})
     const [editShow,setEditShow] = useState(false);
     const [arr,setArr] = useState([]);
     const [query,setQuery] = useState("")
     const [edit,setEdit]= useState(false)
    
+    // listing students' list as soon as component loads
     useEffect(()=>{
-
         if(localStorage.getItem('uid'))
             props.setAuth(true)
 
@@ -47,6 +47,7 @@ const StudentTable = (props)=>{
         })
     },[show])
 
+    // function to revalidate list after it is updated
     const revalidate = ()=>{
         var ar = []
         firebase
@@ -61,11 +62,13 @@ const StudentTable = (props)=>{
         })
     }
 
+    // handling modal rendering
     const viewHandler = (e)=>{
         e.preventDefault();
         setShow(true)
     }
-      
+    
+    // Handling pagination
       const [page, setPage] = React.useState(0);
       const [rowsPerPage, setRowsPerPage] = React.useState(5);
     
@@ -79,6 +82,7 @@ const StudentTable = (props)=>{
       };
     
 
+    // Handling logout functionality
       const logoutHandler = ()=>{
           localStorage.setItem('uid','')
           props.setAuth(false)

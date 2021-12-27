@@ -23,7 +23,7 @@ const EditStudentTable = (props) =>{
     },[props.data])
 
 
-    //creating student profile
+    //Editing student profile
     const submitHandler = ()=>{
     firebase.database().ref(`/Students/`).child(rollId)
     .update({
@@ -32,15 +32,17 @@ const EditStudentTable = (props) =>{
         course,
         gender
     })
-    .then((res)=>{ console.log(res)
+    .then((res)=>{ console.log("update function")
     })
     .catch((error) => {
             console.log(error)
     });
+    //refreshing the student list and vanishing modal
     props.revalidate()
     props.setEditShow(false)
     }
 
+    //Deleting student profile
     const deleteHandler = (e)=>{
         e.preventDefault()
 

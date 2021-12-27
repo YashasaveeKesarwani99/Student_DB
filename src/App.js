@@ -11,19 +11,20 @@ import StudentTable from './Components/StudentTable/StudentTable';
 
 function App() {
 
-  const [uid,setUid] = useState("")
+  //for conditional rendering of pages
   const [auth,setAuth] = useState(false)
 
   useEffect(()=>{
-    setUid(localStorage.getItem("uid"))
     if(localStorage.getItem("uid"))
       setAuth(true)
   },[])
   
+
+  //initializing firebase app
   if (!firebase.apps.length) {
      firebase.initializeApp(firebaseConfig);
    }else {
-      firebase.app(); // if already initialized, use that one
+      firebase.app(); 
    }
  
    if(auth)

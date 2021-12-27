@@ -9,13 +9,12 @@ const Login = (props)=>{
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
 
+    // handling login function
     const submitHandler = (e) =>{
         e.preventDefault()
 
         firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user)=>{
-            console.log(user)
-            console.log(user.uid)
             localStorage.setItem('uid',user.uid)
             props.setAuth(true)
         })
