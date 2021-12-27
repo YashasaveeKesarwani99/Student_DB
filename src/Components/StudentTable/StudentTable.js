@@ -45,7 +45,7 @@ const StudentTable = (props)=>{
            setArr([])
            setArr(ar)
         })
-    },[show])
+    },[show,props])
 
     // function to revalidate list after it is updated
     const revalidate = ()=>{
