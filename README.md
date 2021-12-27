@@ -12,4 +12,7 @@ npm install
 
 //to run in development enviroment
 npm start
+
+//to run the test 
+npm test
 ```

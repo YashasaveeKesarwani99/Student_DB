@@ -122,7 +122,7 @@ const StudentTable = (props)=>{
             </Form.Group>
             </Form>
             <div>
-            <Button variant='primary' onClick={(e)=>viewHandler(e)}>
+            <Button variant='primary' onClick={(e)=>viewHandler(e)} className="button">
                 <div style={{display:'flex', height:'1.5em'}}>
                 <AddIcon fontSize="small"/>
                 <p>Add Student</p>
